@@ -1,0 +1,18 @@
+with source as (
+    select * from {{ source('health_raw', 'doctors') }}
+),
+
+cleaned as (
+    select
+        doctor_id,
+        trim(first_name) as first_name,
+        trim(last_name) as last_name,
+        specialty,
+        department,
+        email,
+        phone,
+        created_ts::timestamp_ntz as created_at
+    from source
+)
+
+select * from cleaned
