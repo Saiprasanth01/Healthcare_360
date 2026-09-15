@@ -1,0 +1,19 @@
+with source as (
+    select * from {{ source('health_raw', 'patient_bills') }}
+),
+
+cleaned as (
+    select
+        bill_id,
+        encounter_id,
+        patient_id,
+        total_amount::numeric(10,2) as total_amount,
+        insurance_paid::numeric(10,2) as insurance_paid,
+        patient_paid::numeric(10,2) as patient_paid,
+        billing_date::date as billing_date,
+        status as payment_status,
+        created_ts::timestamp_ntz as created_at
+    from source
+)
+
+select * from cleaned
