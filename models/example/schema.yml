@@ -1,21 +1,22 @@
-
-version: 2
-
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: .sql
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+sources:
+  - name: health_raw
+    description: "Raw healthcare datasets loaded into Snowflake from CSV and JSON files."
+    database: HEALTH360_PROJECT
+    schema: RAW
+    tables:
+      - name: patients
+        description: "Raw patient demographic details and metadata."
+      - name: encounters
+        description: "Patient hospital visits and encounter records."
+      - name: diagnosis_records
+        description: "Medical diagnoses linked to patient encounters."
+      - name: procedures
+        description: "Procedures performed during patient visits."
+      - name: patient_bills
+        description: "Billing and financial cost details for patient visits."
+      - name: facilities
+        description: "Hospital and medical facility locations."
+      - name: doctors
+        description: "Doctor profiles, departments, and specialties."
+      - name: lab_results
+        description: "Laboratory test results and values."
