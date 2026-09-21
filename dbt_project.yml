@@ -2,7 +2,6 @@ name: 'Healthcare_360'
 version: '1.0.0'
 config-version: 2
 
-# This profile should match the connection name in your profiles.yml file
 profile: 'health360_dbt'
 
 model-paths: ["models"]
@@ -12,17 +11,23 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-target-path: "target"  # directory compiled SQL files go to
-clean-targets:         # directories removed by 'dbt clean'
+target-path: "target"
+clean-targets:
   - "target"
   - "dabs"
   - "logs"
 
 models:
-  Healthcare_360:  # Matches the 'name' defined at the top of dbt_project.yml
-    example:
-      staging:
-        +schema: STAGING
-        +materialized: table
-      marts:
-        +materialized: table
+  Healthcare_360:
+    staging:
+      +schema: STAGING
+      +materialized: view
+    dimensions:
+      +schema: MARTS
+      +materialized: table
+    facts:
+      +schema: INTERMEDIATE
+      +materialized: table
+    marts:
+      +schema: MARTS
+      +materialized: table

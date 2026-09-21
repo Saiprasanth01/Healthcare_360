@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: health_raw
+    description: "Raw healthcare datasets loaded into Snowflake from CSV files."
+    database: HEALTH360_PROJECT
+    schema: RAW
+    tables:
+      - name: patients
+        description: "Raw patient demographic details."
+        columns:
+          - name: patient_id
+            tests: [unique, not_null]
+      - name: encounters
+        description: "Patient hospital visits and encounter records."
+        columns:
+          - name: encounter_id
+            tests: [unique, not_null]
+      - name: diagnosis_records
+        description: "Medical diagnoses linked to patient encounters."
+      - name: procedures
+        description: "Procedures performed during patient visits."
+      - name: patient_bills
+        description: "Billing and financial cost details for patient visits."
+        columns:
+          - name: claim_id
+            tests: [unique, not_null]
+      - name: facilities
+        description: "Hospital and medical facility locations."
+        columns:
+          - name: facility_id
+            tests: [unique, not_null]
+      - name: stg_doctors
+        description: "Doctor profiles loaded directly into RAW as a pre-staged table."
+        columns:
+          - name: doctor_id
+            tests: [unique, not_null]
+      - name: stg_lab_results
+        description: "Lab results loaded directly into RAW as a pre-staged table."
