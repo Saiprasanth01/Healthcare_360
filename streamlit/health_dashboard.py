@@ -1,8 +1,9 @@
 import streamlit as st
-import snowflake.connector
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from snowflake.sqlalchemy import URL
+from sqlalchemy import create_engine
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -13,20 +14,23 @@ st.set_page_config(
 
 # ── Snowflake connection ──────────────────────────────────────────────────────
 @st.cache_resource
-def get_connection():
-    return snowflake.connector.connect(
+def get_engine():
+    return create_engine(URL(
         account   = "CHNAFLS-ZSB47658",
         user      = "SAIPRASANTH",
         password  = "Ravikumar1981@#",
         role      = "HEALTH_DWH_ROLE",
         warehouse = "TRANSFORM_WH",
         database  = "HEALTH360_PROJECT",
-    )
+    ))
 
 @st.cache_data(ttl=300)
 def query(sql: str) -> pd.DataFrame:
-    conn = get_connection()
-    return pd.read_sql(sql, conn)
+    engine = get_engine()
+    with engine.connect() as conn:
+        df = pd.read_sql(sql, conn)
+        df.columns = df.columns.str.upper()
+        return df
 
 # ── Sidebar navigation ────────────────────────────────────────────────────────
 st.sidebar.image("https://img.icons8.com/color/96/hospital.png", width=80)
@@ -77,7 +81,7 @@ if page == "Overview":
         """)
         fig = px.pie(enc_type, names="ENCOUNTER_TYPE", values="ENCOUNTERS",
                      hole=0.4, color_discrete_sequence=px.colors.qualitative.Pastel)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
     with col2:
         st.subheader("Encounters by State")
@@ -88,7 +92,7 @@ if page == "Overview":
         """)
         fig = px.bar(by_state, x="STATE", y="ENCOUNTERS",
                      color="ENCOUNTERS", color_continuous_scale="Blues")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
     st.subheader("Top 10 Diagnoses")
     diag = query("""
@@ -100,7 +104,7 @@ if page == "Overview":
     fig = px.bar(diag, x="CASES", y="DIAGNOSIS_DESCRIPTION", orientation="h",
                  color="CASES", color_continuous_scale="Teal")
     fig.update_layout(yaxis={"categoryorder": "total ascending"})
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 # ═════════════════════════════════════════════════════════════════════════════
 # PATIENT 360
@@ -145,7 +149,7 @@ elif page == "Patient 360":
                     "LENGTH_OF_STAY", "PROVIDER_NAME", "FACILITY_NAME",
                     "DIAGNOSIS_CODE", "DIAGNOSIS_DESCRIPTION"
                 ]].rename(columns=str.title),
-                use_container_width=True,
+                width='stretch',
                 hide_index=True,
             )
 
@@ -153,7 +157,7 @@ elif page == "Patient 360":
             fig = px.bar(info, x="ENCOUNTER_DATE", y="LENGTH_OF_STAY",
                          color="ENCOUNTER_TYPE",
                          color_discrete_sequence=px.colors.qualitative.Set2)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
 # ═════════════════════════════════════════════════════════════════════════════
 # COST METRICS
@@ -202,7 +206,7 @@ elif page == "Cost Metrics":
             fig.add_bar(name="Paid",   x=monthly["MONTH_NAME"], y=monthly["TOTAL_PAID"],
                         marker_color="#34A853")
             fig.update_layout(barmode="group")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
         with col2:
             st.subheader("Denial Rate by State")
@@ -210,7 +214,7 @@ elif page == "Cost Metrics":
             fig = px.bar(by_state, x="STATE", y="DENIAL_RATE_PCT",
                          color="DENIAL_RATE_PCT", color_continuous_scale="Reds",
                          labels={"DENIAL_RATE_PCT": "Denial Rate %"})
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
         st.subheader("Claims Detail")
         st.dataframe(
@@ -219,7 +223,7 @@ elif page == "Cost Metrics":
                 "TOTAL_CLAIMS", "TOTAL_BILLED", "TOTAL_PAID",
                 "TOTAL_OUTSTANDING", "DENIAL_RATE_PCT"
             ]].rename(columns=str.title),
-            use_container_width=True,
+            width='stretch',
             hide_index=True,
         )
 
@@ -247,14 +251,14 @@ elif page == "Readmissions":
             by_gender = data.groupby("GENDER").size().reset_index(name="COUNT")
             fig = px.pie(by_gender, names="GENDER", values="COUNT", hole=0.4,
                          color_discrete_sequence=px.colors.qualitative.Set3)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
         with col2:
             st.subheader("Days to Readmission Distribution")
             fig = px.histogram(data, x="DAYS_TO_READMIT", nbins=30,
                                color_discrete_sequence=["#4C8BF5"],
                                labels={"DAYS_TO_READMIT": "Days to Readmit"})
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
         st.subheader("Readmission Records")
         st.dataframe(
@@ -263,6 +267,6 @@ elif page == "Readmissions":
                 "ENCOUNTER_DATE", "DISCHARGE_DATE", "LENGTH_OF_STAY",
                 "READMIT_DATE", "DAYS_TO_READMIT"
             ]].rename(columns=str.title),
-            use_container_width=True,
+            width='stretch',
             hide_index=True,
         )
