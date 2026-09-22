@@ -7452,3 +7452,1115 @@ group by 1, 2, 3, 4, 5, 6
 [0m02:13:36.029575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F459B0F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F4A2F1E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F4596AD20>]}
 [0m02:13:36.029575 [debug] [MainThread]: Flushing usage events
 [0m02:13:37.592720 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:05:29.980633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE9F44920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE93BFFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE727EF90>]}
+
+
+============================== 23:05:29.993825 | 12e06f6d-e0df-45e5-beef-eac3b31816ea ==============================
+[0m23:05:29.993825 [info ] [MainThread]: Running with dbt=1.12.4
+[0m23:05:29.993825 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\SAIPRASANTHR\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt docs generate', 'log_path': 'C:\\Learning\\DBT\\Healthcare_360\\logs'}
+[0m23:05:43.322403 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:05:43.322403 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:05:43.326077 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:05:52.609471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '12e06f6d-e0df-45e5-beef-eac3b31816ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FEB10BB00>]}
+[0m23:05:52.841243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '12e06f6d-e0df-45e5-beef-eac3b31816ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FEECD0AA0>]}
+[0m23:05:52.855357 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m23:05:56.373200 [debug] [MainThread]: checksum: 43c1271578ffc3f5e4620ff56cb8f61de61442f145dd894dfbd4e3c7f22810bf, vars: {}, profile: health360_dbt, target: dev, version: 1.12.4
+[0m23:06:03.331068 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:06:03.331068 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:06:03.331068 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:06:03.363039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '12e06f6d-e0df-45e5-beef-eac3b31816ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FEEECAF90>]}
+[0m23:06:03.490772 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '12e06f6d-e0df-45e5-beef-eac3b31816ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FEF2DB020>]}
+[0m23:06:03.490772 [info ] [MainThread]: Found 21 models, 1 snapshot, 10 data tests, 8 sources, 662 macros
+[0m23:06:03.499027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12e06f6d-e0df-45e5-beef-eac3b31816ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE72A86E0>]}
+[0m23:06:03.499027 [info ] [MainThread]: 
+[0m23:06:03.499027 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m23:06:03.499027 [info ] [MainThread]: 
+[0m23:06:03.505521 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m23:06:03.508260 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTH360_PROJECT_MARTS'
+[0m23:06:03.508260 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTH360_PROJECT_INTERMEDIATE'
+[0m23:06:03.572364 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_MARTS"
+[0m23:06:03.572364 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_MARTS: show objects in HEALTH360_PROJECT.MARTS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_MARTS"} */;
+[0m23:06:03.572364 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:06:03.572364 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_INTERMEDIATE"
+[0m23:06:03.572364 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_INTERMEDIATE: show objects in HEALTH360_PROJECT.INTERMEDIATE
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_INTERMEDIATE"} */;
+[0m23:06:03.572364 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:06:13.046104 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 9.466 seconds
+[0m23:06:13.074478 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_INTERMEDIATE"
+[0m23:06:13.076526 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_INTERMEDIATE: show user functions in HEALTH360_PROJECT.INTERMEDIATE
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_INTERMEDIATE"} */
+[0m23:06:13.599554 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 10.021 seconds
+[0m23:06:13.613610 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_MARTS"
+[0m23:06:13.615674 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_MARTS: show user functions in HEALTH360_PROJECT.MARTS
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_MARTS"} */
+[0m23:06:13.808474 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.730 seconds
+[0m23:06:13.818045 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_HEALTH360_PROJECT_INTERMEDIATE, now list_HEALTH360_PROJECT_STAGING)
+[0m23:06:13.830741 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_STAGING"
+[0m23:06:13.830741 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_STAGING: show objects in HEALTH360_PROJECT.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_STAGING"} */;
+[0m23:06:14.375350 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.756 seconds
+[0m23:06:14.383241 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_HEALTH360_PROJECT_MARTS, now list_HEALTH360_PROJECT_SNAPSHOTS)
+[0m23:06:14.395362 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_SNAPSHOTS"
+[0m23:06:14.399368 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_SNAPSHOTS: show objects in HEALTH360_PROJECT.SNAPSHOTS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_SNAPSHOTS"} */;
+[0m23:06:15.001544 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 1.177 seconds
+[0m23:06:15.023384 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_STAGING"
+[0m23:06:15.025429 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_STAGING: show user functions in HEALTH360_PROJECT.STAGING
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_STAGING"} */
+[0m23:06:15.358744 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.958 seconds
+[0m23:06:15.371269 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_SNAPSHOTS"
+[0m23:06:15.373308 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_SNAPSHOTS: show user functions in HEALTH360_PROJECT.SNAPSHOTS
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_SNAPSHOTS"} */
+[0m23:06:15.401568 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.382 seconds
+[0m23:06:16.125396 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.761 seconds
+[0m23:06:16.145126 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12e06f6d-e0df-45e5-beef-eac3b31816ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE6C414F0>]}
+[0m23:06:16.183127 [debug] [Thread-2 (]: Began running node model.Healthcare_360.dim_date
+[0m23:06:16.186943 [debug] [Thread-3 (]: Began running node model.Healthcare_360.stg_diagnosis
+[0m23:06:16.191040 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.Healthcare_360.dim_date'
+[0m23:06:16.195141 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.Healthcare_360.stg_diagnosis'
+[0m23:06:16.197196 [debug] [Thread-2 (]: Began compiling node model.Healthcare_360.dim_date
+[0m23:06:16.199239 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.stg_diagnosis
+[0m23:06:16.234448 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.stg_diagnosis"
+[0m23:06:16.282258 [debug] [Thread-2 (]: Using snowflake connection "model.Healthcare_360.dim_date"
+[0m23:06:16.282258 [debug] [Thread-2 (]: On model.Healthcare_360.dim_date: select datediff(
+        day,
+        cast('2015-01-01' as date),
+        cast('2035-12-31' as date)
+        )
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "node_id": "model.Healthcare_360.dim_date"} */
+[0m23:06:16.296012 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:06:16.300103 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.stg_diagnosis
+[0m23:06:16.305907 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.stg_diagnosis
+[0m23:06:16.307933 [debug] [Thread-3 (]: Began running node model.Healthcare_360.stg_doctors
+[0m23:06:16.309845 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.stg_diagnosis, now model.Healthcare_360.stg_doctors)
+[0m23:06:16.313963 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.stg_doctors
+[0m23:06:16.322975 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.stg_doctors"
+[0m23:06:16.329831 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.stg_doctors
+[0m23:06:16.340132 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.stg_doctors
+[0m23:06:16.342178 [debug] [Thread-3 (]: Began running node model.Healthcare_360.stg_encounters
+[0m23:06:16.348041 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.stg_doctors, now model.Healthcare_360.stg_encounters)
+[0m23:06:16.348041 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.stg_encounters
+[0m23:06:16.366415 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.stg_encounters"
+[0m23:06:16.385085 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.stg_encounters
+[0m23:06:16.389193 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.stg_encounters
+[0m23:06:16.395098 [debug] [Thread-3 (]: Began running node model.Healthcare_360.stg_facilities
+[0m23:06:16.397157 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.stg_encounters, now model.Healthcare_360.stg_facilities)
+[0m23:06:16.399213 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.stg_facilities
+[0m23:06:16.408992 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.stg_facilities"
+[0m23:06:16.418771 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.stg_facilities
+[0m23:06:16.422871 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.stg_facilities
+[0m23:06:16.424906 [debug] [Thread-3 (]: Began running node model.Healthcare_360.stg_lab_results
+[0m23:06:16.424906 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.stg_facilities, now model.Healthcare_360.stg_lab_results)
+[0m23:06:16.424906 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.stg_lab_results
+[0m23:06:16.440684 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.stg_lab_results"
+[0m23:06:16.442048 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.stg_lab_results
+[0m23:06:16.451872 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.stg_lab_results
+[0m23:06:16.453921 [debug] [Thread-3 (]: Began running node model.Healthcare_360.stg_patient_bills
+[0m23:06:16.455953 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.stg_lab_results, now model.Healthcare_360.stg_patient_bills)
+[0m23:06:16.460150 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.stg_patient_bills
+[0m23:06:16.468323 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.stg_patient_bills"
+[0m23:06:16.478180 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.stg_patient_bills
+[0m23:06:16.482237 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.stg_patient_bills
+[0m23:06:16.486284 [debug] [Thread-3 (]: Began running node model.Healthcare_360.stg_patients
+[0m23:06:16.490122 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.stg_patient_bills, now model.Healthcare_360.stg_patients)
+[0m23:06:16.490122 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.stg_patients
+[0m23:06:16.500425 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.stg_patients"
+[0m23:06:16.504532 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.stg_patients
+[0m23:06:16.511550 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.stg_patients
+[0m23:06:16.513596 [debug] [Thread-3 (]: Began running node model.Healthcare_360.stg_procedures
+[0m23:06:16.515627 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.stg_patients, now model.Healthcare_360.stg_procedures)
+[0m23:06:16.518329 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.stg_procedures
+[0m23:06:16.520364 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.stg_procedures"
+[0m23:06:16.520364 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.stg_procedures
+[0m23:06:16.538180 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.stg_procedures
+[0m23:06:16.538180 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_not_null_health_raw_encounters_encounter_id.e9f516d2a6
+[0m23:06:16.538180 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.stg_procedures, now test.Healthcare_360.source_not_null_health_raw_encounters_encounter_id.e9f516d2a6)
+[0m23:06:16.538180 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_not_null_health_raw_encounters_encounter_id.e9f516d2a6
+[0m23:06:16.599185 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_not_null_health_raw_encounters_encounter_id.e9f516d2a6"
+[0m23:06:16.609681 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_not_null_health_raw_encounters_encounter_id.e9f516d2a6
+[0m23:06:16.615339 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_not_null_health_raw_encounters_encounter_id.e9f516d2a6
+[0m23:06:16.617365 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_not_null_health_raw_facilities_facility_id.15f597718a
+[0m23:06:16.617365 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_not_null_health_raw_encounters_encounter_id.e9f516d2a6, now test.Healthcare_360.source_not_null_health_raw_facilities_facility_id.15f597718a)
+[0m23:06:16.617365 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_not_null_health_raw_facilities_facility_id.15f597718a
+[0m23:06:16.649061 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_not_null_health_raw_facilities_facility_id.15f597718a"
+[0m23:06:16.657682 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_not_null_health_raw_facilities_facility_id.15f597718a
+[0m23:06:16.660788 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_not_null_health_raw_facilities_facility_id.15f597718a
+[0m23:06:16.667226 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_not_null_health_raw_patient_bills_claim_id.bd4a1a026e
+[0m23:06:16.667226 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_not_null_health_raw_facilities_facility_id.15f597718a, now test.Healthcare_360.source_not_null_health_raw_patient_bills_claim_id.bd4a1a026e)
+[0m23:06:16.670617 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_not_null_health_raw_patient_bills_claim_id.bd4a1a026e
+[0m23:06:16.709005 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_not_null_health_raw_patient_bills_claim_id.bd4a1a026e"
+[0m23:06:16.718609 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_not_null_health_raw_patient_bills_claim_id.bd4a1a026e
+[0m23:06:16.725831 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_not_null_health_raw_patient_bills_claim_id.bd4a1a026e
+[0m23:06:16.729920 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_not_null_health_raw_patients_patient_id.30e86fa739
+[0m23:06:16.731976 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_not_null_health_raw_patient_bills_claim_id.bd4a1a026e, now test.Healthcare_360.source_not_null_health_raw_patients_patient_id.30e86fa739)
+[0m23:06:16.734010 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_not_null_health_raw_patients_patient_id.30e86fa739
+[0m23:06:16.763183 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_not_null_health_raw_patients_patient_id.30e86fa739"
+[0m23:06:16.773098 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_not_null_health_raw_patients_patient_id.30e86fa739
+[0m23:06:16.777201 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_not_null_health_raw_patients_patient_id.30e86fa739
+[0m23:06:16.781272 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_not_null_health_raw_stg_doctors_doctor_id.fb8b1af3ca
+[0m23:06:16.781272 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_not_null_health_raw_patients_patient_id.30e86fa739, now test.Healthcare_360.source_not_null_health_raw_stg_doctors_doctor_id.fb8b1af3ca)
+[0m23:06:16.784612 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_not_null_health_raw_stg_doctors_doctor_id.fb8b1af3ca
+[0m23:06:16.813065 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_not_null_health_raw_stg_doctors_doctor_id.fb8b1af3ca"
+[0m23:06:16.820521 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_not_null_health_raw_stg_doctors_doctor_id.fb8b1af3ca
+[0m23:06:16.826602 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_not_null_health_raw_stg_doctors_doctor_id.fb8b1af3ca
+[0m23:06:16.827148 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_unique_health_raw_encounters_encounter_id.c05133eabd
+[0m23:06:16.831008 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_not_null_health_raw_stg_doctors_doctor_id.fb8b1af3ca, now test.Healthcare_360.source_unique_health_raw_encounters_encounter_id.c05133eabd)
+[0m23:06:16.831008 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_unique_health_raw_encounters_encounter_id.c05133eabd
+[0m23:06:16.875630 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_unique_health_raw_encounters_encounter_id.c05133eabd"
+[0m23:06:16.883976 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_unique_health_raw_encounters_encounter_id.c05133eabd
+[0m23:06:16.883976 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_unique_health_raw_encounters_encounter_id.c05133eabd
+[0m23:06:16.888934 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_unique_health_raw_facilities_facility_id.6f13d0c0bd
+[0m23:06:16.888934 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_unique_health_raw_encounters_encounter_id.c05133eabd, now test.Healthcare_360.source_unique_health_raw_facilities_facility_id.6f13d0c0bd)
+[0m23:06:16.892118 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_unique_health_raw_facilities_facility_id.6f13d0c0bd
+[0m23:06:16.907291 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_unique_health_raw_facilities_facility_id.6f13d0c0bd"
+[0m23:06:16.916097 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_unique_health_raw_facilities_facility_id.6f13d0c0bd
+[0m23:06:16.922066 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_unique_health_raw_facilities_facility_id.6f13d0c0bd
+[0m23:06:16.922066 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_unique_health_raw_patient_bills_claim_id.99b9cb99f3
+[0m23:06:16.924872 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_unique_health_raw_facilities_facility_id.6f13d0c0bd, now test.Healthcare_360.source_unique_health_raw_patient_bills_claim_id.99b9cb99f3)
+[0m23:06:16.924872 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_unique_health_raw_patient_bills_claim_id.99b9cb99f3
+[0m23:06:16.941445 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_unique_health_raw_patient_bills_claim_id.99b9cb99f3"
+[0m23:06:16.959313 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_unique_health_raw_patient_bills_claim_id.99b9cb99f3
+[0m23:06:16.959313 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_unique_health_raw_patient_bills_claim_id.99b9cb99f3
+[0m23:06:16.959313 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_unique_health_raw_patients_patient_id.138aa702e7
+[0m23:06:16.959313 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_unique_health_raw_patient_bills_claim_id.99b9cb99f3, now test.Healthcare_360.source_unique_health_raw_patients_patient_id.138aa702e7)
+[0m23:06:16.959313 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_unique_health_raw_patients_patient_id.138aa702e7
+[0m23:06:16.991892 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_unique_health_raw_patients_patient_id.138aa702e7"
+[0m23:06:16.991892 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_unique_health_raw_patients_patient_id.138aa702e7
+[0m23:06:17.002963 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_unique_health_raw_patients_patient_id.138aa702e7
+[0m23:06:17.005341 [debug] [Thread-3 (]: Began running node test.Healthcare_360.source_unique_health_raw_stg_doctors_doctor_id.340828d64c
+[0m23:06:17.005341 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_unique_health_raw_patients_patient_id.138aa702e7, now test.Healthcare_360.source_unique_health_raw_stg_doctors_doctor_id.340828d64c)
+[0m23:06:17.007968 [debug] [Thread-3 (]: Began compiling node test.Healthcare_360.source_unique_health_raw_stg_doctors_doctor_id.340828d64c
+[0m23:06:17.024918 [debug] [Thread-3 (]: Writing injected SQL for node "test.Healthcare_360.source_unique_health_raw_stg_doctors_doctor_id.340828d64c"
+[0m23:06:17.034770 [debug] [Thread-3 (]: Began executing node test.Healthcare_360.source_unique_health_raw_stg_doctors_doctor_id.340828d64c
+[0m23:06:17.038938 [debug] [Thread-3 (]: Finished running node test.Healthcare_360.source_unique_health_raw_stg_doctors_doctor_id.340828d64c
+[0m23:06:17.038938 [debug] [Thread-3 (]: Began running node model.Healthcare_360.dim_diagnosis
+[0m23:06:17.043147 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.Healthcare_360.source_unique_health_raw_stg_doctors_doctor_id.340828d64c, now model.Healthcare_360.dim_diagnosis)
+[0m23:06:17.043147 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.dim_diagnosis
+[0m23:06:17.088837 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.dim_diagnosis"
+[0m23:06:17.092003 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.dim_diagnosis
+[0m23:06:17.092003 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.dim_diagnosis
+[0m23:06:17.092003 [debug] [Thread-3 (]: Began running node model.Healthcare_360.dim_facility
+[0m23:06:17.100593 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.dim_diagnosis, now model.Healthcare_360.dim_facility)
+[0m23:06:17.100593 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.dim_facility
+[0m23:06:17.108658 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.dim_facility"
+[0m23:06:17.116903 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.dim_facility
+[0m23:06:17.116903 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.dim_facility
+[0m23:06:17.122204 [debug] [Thread-3 (]: Began running node model.Healthcare_360.dim_patient
+[0m23:06:17.125142 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.dim_facility, now model.Healthcare_360.dim_patient)
+[0m23:06:17.125142 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.dim_patient
+[0m23:06:17.133288 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.dim_patient"
+[0m23:06:17.138777 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.dim_patient
+[0m23:06:17.141502 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.dim_patient
+[0m23:06:17.141502 [debug] [Thread-3 (]: Began running node snapshot.Healthcare_360.patient_snapshot
+[0m23:06:17.141502 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.dim_patient, now snapshot.Healthcare_360.patient_snapshot)
+[0m23:06:17.141502 [debug] [Thread-3 (]: Began compiling node snapshot.Healthcare_360.patient_snapshot
+[0m23:06:17.149964 [debug] [Thread-3 (]: Writing injected SQL for node "snapshot.Healthcare_360.patient_snapshot"
+[0m23:06:17.158362 [debug] [Thread-3 (]: Began executing node snapshot.Healthcare_360.patient_snapshot
+[0m23:06:17.158362 [debug] [Thread-3 (]: Finished running node snapshot.Healthcare_360.patient_snapshot
+[0m23:06:17.158362 [debug] [Thread-3 (]: Began running node model.Healthcare_360.dim_procedure
+[0m23:06:17.158362 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly snapshot.Healthcare_360.patient_snapshot, now model.Healthcare_360.dim_procedure)
+[0m23:06:17.166527 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.dim_procedure
+[0m23:06:17.174984 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.dim_procedure"
+[0m23:06:17.174984 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.dim_procedure
+[0m23:06:17.174984 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.dim_procedure
+[0m23:06:17.183091 [debug] [Thread-3 (]: Began running node model.Healthcare_360.dim_provider
+[0m23:06:17.183091 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.dim_procedure, now model.Healthcare_360.dim_provider)
+[0m23:06:17.188918 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.dim_provider
+[0m23:06:17.199414 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.dim_provider"
+[0m23:06:17.209387 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.dim_provider
+[0m23:06:17.209387 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.dim_provider
+[0m23:06:20.338009 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 4.046 seconds
+[0m23:06:20.381415 [debug] [Thread-2 (]: Writing injected SQL for node "model.Healthcare_360.dim_date"
+[0m23:06:20.392102 [debug] [Thread-2 (]: Began executing node model.Healthcare_360.dim_date
+[0m23:06:20.396157 [debug] [Thread-2 (]: Finished running node model.Healthcare_360.dim_date
+[0m23:06:20.398682 [debug] [Thread-3 (]: Began running node model.Healthcare_360.fact_encounter
+[0m23:06:20.398682 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.dim_provider, now model.Healthcare_360.fact_encounter)
+[0m23:06:20.404414 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.fact_encounter
+[0m23:06:20.418552 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.fact_encounter"
+[0m23:06:20.423091 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.fact_encounter
+[0m23:06:20.428461 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.fact_encounter
+[0m23:06:20.428461 [debug] [Thread-2 (]: Began running node model.Healthcare_360.fact_claim
+[0m23:06:20.432632 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.dim_date, now model.Healthcare_360.fact_claim)
+[0m23:06:20.432632 [debug] [Thread-3 (]: Began running node model.Healthcare_360.fact_diagnosis
+[0m23:06:20.436203 [debug] [Thread-2 (]: Began compiling node model.Healthcare_360.fact_claim
+[0m23:06:20.436203 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.fact_encounter, now model.Healthcare_360.fact_diagnosis)
+[0m23:06:20.444261 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.fact_diagnosis
+[0m23:06:20.448127 [debug] [Thread-2 (]: Writing injected SQL for node "model.Healthcare_360.fact_claim"
+[0m23:06:20.454177 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.fact_diagnosis"
+[0m23:06:20.460669 [debug] [Thread-2 (]: Began executing node model.Healthcare_360.fact_claim
+[0m23:06:20.462691 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.fact_diagnosis
+[0m23:06:20.464708 [debug] [Thread-2 (]: Finished running node model.Healthcare_360.fact_claim
+[0m23:06:20.467939 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.fact_diagnosis
+[0m23:06:20.467939 [debug] [Thread-2 (]: Began running node model.Healthcare_360.fact_procedure
+[0m23:06:20.467939 [debug] [Thread-3 (]: Began running node model.Healthcare_360.readmission_dashboard
+[0m23:06:20.472523 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.fact_claim, now model.Healthcare_360.fact_procedure)
+[0m23:06:20.474573 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.fact_diagnosis, now model.Healthcare_360.readmission_dashboard)
+[0m23:06:20.474573 [debug] [Thread-2 (]: Began compiling node model.Healthcare_360.fact_procedure
+[0m23:06:20.476089 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.readmission_dashboard
+[0m23:06:20.486181 [debug] [Thread-2 (]: Writing injected SQL for node "model.Healthcare_360.fact_procedure"
+[0m23:06:20.493988 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.readmission_dashboard"
+[0m23:06:20.493988 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.readmission_dashboard
+[0m23:06:20.500003 [debug] [Thread-2 (]: Began executing node model.Healthcare_360.fact_procedure
+[0m23:06:20.500003 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.readmission_dashboard
+[0m23:06:20.500003 [debug] [Thread-2 (]: Finished running node model.Healthcare_360.fact_procedure
+[0m23:06:20.500003 [debug] [Thread-3 (]: Began running node model.Healthcare_360.cost_metrics
+[0m23:06:20.510476 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.readmission_dashboard, now model.Healthcare_360.cost_metrics)
+[0m23:06:20.507760 [debug] [Thread-2 (]: Began running node model.Healthcare_360.clinical_overview
+[0m23:06:20.510476 [debug] [Thread-3 (]: Began compiling node model.Healthcare_360.cost_metrics
+[0m23:06:20.512494 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.Healthcare_360.fact_procedure, now model.Healthcare_360.clinical_overview)
+[0m23:06:20.522558 [debug] [Thread-3 (]: Writing injected SQL for node "model.Healthcare_360.cost_metrics"
+[0m23:06:20.523070 [debug] [Thread-2 (]: Began compiling node model.Healthcare_360.clinical_overview
+[0m23:06:20.533616 [debug] [Thread-2 (]: Writing injected SQL for node "model.Healthcare_360.clinical_overview"
+[0m23:06:20.535631 [debug] [Thread-2 (]: Began executing node model.Healthcare_360.clinical_overview
+[0m23:06:20.539101 [debug] [Thread-3 (]: Began executing node model.Healthcare_360.cost_metrics
+[0m23:06:20.539101 [debug] [Thread-2 (]: Finished running node model.Healthcare_360.clinical_overview
+[0m23:06:20.539101 [debug] [Thread-3 (]: Finished running node model.Healthcare_360.cost_metrics
+[0m23:06:20.547434 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:06:20.547434 [debug] [MainThread]: Connection 'list_HEALTH360_PROJECT_SNAPSHOTS' was left open.
+[0m23:06:20.547434 [debug] [MainThread]: On list_HEALTH360_PROJECT_SNAPSHOTS: Close
+[0m23:06:21.290210 [debug] [MainThread]: Connection 'list_HEALTH360_PROJECT_STAGING' was left open.
+[0m23:06:21.305051 [debug] [MainThread]: On list_HEALTH360_PROJECT_STAGING: Close
+[0m23:06:22.189876 [debug] [MainThread]: Connection 'model.Healthcare_360.clinical_overview' was left open.
+[0m23:06:22.189876 [debug] [MainThread]: On model.Healthcare_360.clinical_overview: Close
+[0m23:06:23.044957 [debug] [MainThread]: Connection 'model.Healthcare_360.cost_metrics' was properly closed.
+[0m23:06:23.065139 [debug] [MainThread]: Command end result
+[0m23:06:23.577252 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Learning\DBT\Healthcare_360\target\manifest.json
+[0m23:06:23.632538 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Learning\DBT\Healthcare_360\target\semantic_manifest.json
+[0m23:06:23.829878 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Learning\DBT\Healthcare_360\target\osi_document.json
+[0m23:06:23.861770 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Learning\DBT\Healthcare_360\target\run_results.json
+[0m23:06:24.244466 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m23:06:24.244466 [info ] [MainThread]: Building catalog
+[0m23:06:24.295606 [debug] [ThreadPool]: Acquiring new snowflake connection 'HEALTH360_PROJECT.information_schema'
+[0m23:06:24.377959 [debug] [ThreadPool]: Using snowflake connection "HEALTH360_PROJECT.information_schema"
+[0m23:06:24.377959 [debug] [ThreadPool]: On HEALTH360_PROJECT.information_schema: with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        case
+            when is_dynamic = 'YES' and table_type = 'BASE TABLE' THEN 'DYNAMIC TABLE'
+            else table_type
+        end as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from HEALTH360_PROJECT.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'encounters' and upper("table_name") = upper('encounters')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_provider' and upper("table_name") = upper('dim_provider')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_patients' and upper("table_name") = upper('stg_patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_facility' and upper("table_name") = upper('dim_facility')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'readmission_dashboard' and upper("table_name") = upper('readmission_dashboard')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'diagnosis_records' and upper("table_name") = upper('diagnosis_records')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_patient' and upper("table_name") = upper('dim_patient')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'INTERMEDIATE' and upper("table_schema") = upper('INTERMEDIATE')
+
+                    and 
+    "table_name" ilike 'fact_procedure' and upper("table_name") = upper('fact_procedure')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'stg_doctors' and upper("table_name") = upper('stg_doctors')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_patient_bills' and upper("table_name") = upper('stg_patient_bills')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'patient_bills' and upper("table_name") = upper('patient_bills')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'INTERMEDIATE' and upper("table_schema") = upper('INTERMEDIATE')
+
+                    and 
+    "table_name" ilike 'fact_encounter' and upper("table_name") = upper('fact_encounter')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'facilities' and upper("table_name") = upper('facilities')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'cost_metrics' and upper("table_name") = upper('cost_metrics')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_facilities' and upper("table_name") = upper('stg_facilities')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_diagnosis' and upper("table_name") = upper('dim_diagnosis')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'INTERMEDIATE' and upper("table_schema") = upper('INTERMEDIATE')
+
+                    and 
+    "table_name" ilike 'fact_claim' and upper("table_name") = upper('fact_claim')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_encounters' and upper("table_name") = upper('stg_encounters')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_date' and upper("table_name") = upper('dim_date')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_doctors' and upper("table_name") = upper('stg_doctors')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_lab_results' and upper("table_name") = upper('stg_lab_results')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'stg_lab_results' and upper("table_name") = upper('stg_lab_results')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'procedures' and upper("table_name") = upper('procedures')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'clinical_overview' and upper("table_name") = upper('clinical_overview')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_diagnosis' and upper("table_name") = upper('stg_diagnosis')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SNAPSHOTS' and upper("table_schema") = upper('SNAPSHOTS')
+
+                    and 
+    "table_name" ilike 'patient_snapshot' and upper("table_name") = upper('patient_snapshot')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_procedure' and upper("table_name") = upper('dim_procedure')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'INTERMEDIATE' and upper("table_schema") = upper('INTERMEDIATE')
+
+                    and 
+    "table_name" ilike 'fact_diagnosis' and upper("table_name") = upper('fact_diagnosis')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_procedures' and upper("table_name") = upper('stg_procedures')
+
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from HEALTH360_PROJECT.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'encounters' and upper("table_name") = upper('encounters')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_provider' and upper("table_name") = upper('dim_provider')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_patients' and upper("table_name") = upper('stg_patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_facility' and upper("table_name") = upper('dim_facility')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'readmission_dashboard' and upper("table_name") = upper('readmission_dashboard')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'diagnosis_records' and upper("table_name") = upper('diagnosis_records')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_patient' and upper("table_name") = upper('dim_patient')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'INTERMEDIATE' and upper("table_schema") = upper('INTERMEDIATE')
+
+                    and 
+    "table_name" ilike 'fact_procedure' and upper("table_name") = upper('fact_procedure')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'stg_doctors' and upper("table_name") = upper('stg_doctors')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_patient_bills' and upper("table_name") = upper('stg_patient_bills')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'patient_bills' and upper("table_name") = upper('patient_bills')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'INTERMEDIATE' and upper("table_schema") = upper('INTERMEDIATE')
+
+                    and 
+    "table_name" ilike 'fact_encounter' and upper("table_name") = upper('fact_encounter')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'facilities' and upper("table_name") = upper('facilities')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'cost_metrics' and upper("table_name") = upper('cost_metrics')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_facilities' and upper("table_name") = upper('stg_facilities')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_diagnosis' and upper("table_name") = upper('dim_diagnosis')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'INTERMEDIATE' and upper("table_schema") = upper('INTERMEDIATE')
+
+                    and 
+    "table_name" ilike 'fact_claim' and upper("table_name") = upper('fact_claim')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_encounters' and upper("table_name") = upper('stg_encounters')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_date' and upper("table_name") = upper('dim_date')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_doctors' and upper("table_name") = upper('stg_doctors')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_lab_results' and upper("table_name") = upper('stg_lab_results')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'stg_lab_results' and upper("table_name") = upper('stg_lab_results')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'procedures' and upper("table_name") = upper('procedures')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'clinical_overview' and upper("table_name") = upper('clinical_overview')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_diagnosis' and upper("table_name") = upper('stg_diagnosis')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'SNAPSHOTS' and upper("table_schema") = upper('SNAPSHOTS')
+
+                    and 
+    "table_name" ilike 'patient_snapshot' and upper("table_name") = upper('patient_snapshot')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'MARTS' and upper("table_schema") = upper('MARTS')
+
+                    and 
+    "table_name" ilike 'dim_procedure' and upper("table_name") = upper('dim_procedure')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'INTERMEDIATE' and upper("table_schema") = upper('INTERMEDIATE')
+
+                    and 
+    "table_name" ilike 'fact_diagnosis' and upper("table_name") = upper('fact_diagnosis')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'STAGING' and upper("table_schema") = upper('STAGING')
+
+                    and 
+    "table_name" ilike 'stg_procedures' and upper("table_name") = upper('stg_procedures')
+
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "HEALTH360_PROJECT.information_schema"} */
+[0m23:06:24.391868 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:06:37.262634 [debug] [ThreadPool]: SQL status: SUCCESS 225 in 12.876 seconds
+[0m23:06:38.988903 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\Learning\DBT\Healthcare_360\target\catalog.json
+[0m23:06:39.258571 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Learning\DBT\Healthcare_360\target\manifest.json
+[0m23:06:39.274343 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Learning\DBT\Healthcare_360\target\semantic_manifest.json
+[0m23:06:39.288177 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Learning\DBT\Healthcare_360\target\osi_document.json
+[0m23:06:39.288177 [info ] [MainThread]: Catalog written to C:\Learning\DBT\Healthcare_360\target\catalog.json
+[0m23:06:39.291522 [debug] [MainThread]: Command `dbt docs generate` succeeded at 23:06:39.291522 after 69.54 seconds
+[0m23:06:39.291522 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m23:06:39.291522 [debug] [MainThread]: Connection 'HEALTH360_PROJECT.information_schema' was left open.
+[0m23:06:39.291522 [debug] [MainThread]: On HEALTH360_PROJECT.information_schema: Close
+[0m23:06:40.149299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE88BB0E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FEE04D1F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016FE8E07BC0>]}
+[0m23:06:40.149299 [debug] [MainThread]: Flushing usage events
+[0m23:06:41.362123 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:07:31.309299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087F968A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087F968890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087F9097F0>]}
+
+
+============================== 23:07:31.309299 | 1eeca231-f23f-4fa2-8dd5-ed79c1d0a1eb ==============================
+[0m23:07:31.309299 [info ] [MainThread]: Running with dbt=1.12.4
+[0m23:07:31.309299 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\SAIPRASANTHR\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt docs serve', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Learning\\DBT\\Healthcare_360\\logs'}
+[0m23:07:32.314968 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:07:32.314968 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:07:32.314968 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:07:32.686947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1eeca231-f23f-4fa2-8dd5-ed79c1d0a1eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002080154BB00>]}
+[0m23:07:32.752783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1eeca231-f23f-4fa2-8dd5-ed79c1d0a1eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002087F8A4CB0>]}
+[0m23:08:16.361991 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m23:08:16.484890 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\site-packages\dbt\cli\requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\site-packages\dbt\cli\requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\site-packages\dbt\cli\main.py", line 323, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIPRASANTHR\.conda\envs\dataeng\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m23:08:16.490922 [debug] [MainThread]: Command `dbt docs serve` failed at 23:08:16.490922 after 45.35 seconds
+[0m23:08:16.490922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002080144DAC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020802068E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000208026216A0>]}
+[0m23:08:16.490922 [debug] [MainThread]: Flushing usage events
+[0m23:08:17.855789 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:09:58.378851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D0516CE450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D0516CC320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D0516CE1E0>]}
+
+
+============================== 23:09:58.387901 | 23f3c61b-9c01-4d98-ab68-8333372bca7e ==============================
+[0m23:09:58.387901 [info ] [MainThread]: Running with dbt=1.12.4
+[0m23:09:58.387901 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\SAIPRASANTHR\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt snapshot', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Learning\\DBT\\Healthcare_360\\logs'}
+[0m23:09:59.343234 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:09:59.343234 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:09:59.343234 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:09:59.717953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '23f3c61b-9c01-4d98-ab68-8333372bca7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D0552B64B0>]}
+[0m23:09:59.796042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '23f3c61b-9c01-4d98-ab68-8333372bca7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D04FCFE7E0>]}
+[0m23:09:59.796042 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m23:10:00.251338 [debug] [MainThread]: checksum: 43c1271578ffc3f5e4620ff56cb8f61de61442f145dd894dfbd4e3c7f22810bf, vars: {}, profile: health360_dbt, target: dev, version: 1.12.4
+[0m23:10:00.441241 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:10:00.441241 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:10:00.441241 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:10:00.456923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '23f3c61b-9c01-4d98-ab68-8333372bca7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D05556FB30>]}
+[0m23:10:00.661819 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Learning\DBT\Healthcare_360\target\manifest.json
+[0m23:10:00.661819 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Learning\DBT\Healthcare_360\target\semantic_manifest.json
+[0m23:10:00.693290 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Learning\DBT\Healthcare_360\target\osi_document.json
+[0m23:10:00.725581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '23f3c61b-9c01-4d98-ab68-8333372bca7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D055B543E0>]}
+[0m23:10:00.725581 [info ] [MainThread]: Found 21 models, 1 snapshot, 10 data tests, 8 sources, 662 macros
+[0m23:10:00.725581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23f3c61b-9c01-4d98-ab68-8333372bca7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D055744290>]}
+[0m23:10:00.725581 [info ] [MainThread]: 
+[0m23:10:00.725581 [info ] [MainThread]: Concurrency: 2 threads (target='dev')
+[0m23:10:00.736181 [info ] [MainThread]: 
+[0m23:10:00.736897 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m23:10:00.739089 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTH360_PROJECT'
+[0m23:10:00.787408 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT"
+[0m23:10:00.787408 [debug] [ThreadPool]: On list_HEALTH360_PROJECT: show terse schemas in database HEALTH360_PROJECT
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT"} */
+[0m23:10:00.787408 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:10:03.836293 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 3.052 seconds
+[0m23:10:03.861157 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTH360_PROJECT_INTERMEDIATE'
+[0m23:10:03.880869 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_HEALTH360_PROJECT_MARTS'
+[0m23:10:03.887677 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_INTERMEDIATE"
+[0m23:10:03.898388 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_MARTS"
+[0m23:10:03.898388 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_INTERMEDIATE: show objects in HEALTH360_PROJECT.INTERMEDIATE
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_INTERMEDIATE"} */;
+[0m23:10:03.898388 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_MARTS: show objects in HEALTH360_PROJECT.MARTS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_MARTS"} */;
+[0m23:10:03.898388 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:10:03.902869 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:10:06.710425 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.808 seconds
+[0m23:10:06.730329 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_INTERMEDIATE"
+[0m23:10:06.738004 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_INTERMEDIATE: show user functions in HEALTH360_PROJECT.INTERMEDIATE
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_INTERMEDIATE"} */
+[0m23:10:06.853735 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 2.954 seconds
+[0m23:10:06.860915 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_MARTS"
+[0m23:10:06.860915 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_MARTS: show user functions in HEALTH360_PROJECT.MARTS
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_MARTS"} */
+[0m23:10:07.203343 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.465 seconds
+[0m23:10:07.210552 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_HEALTH360_PROJECT_INTERMEDIATE, now list_HEALTH360_PROJECT_STAGING)
+[0m23:10:07.228393 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_STAGING"
+[0m23:10:07.230450 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_STAGING: show objects in HEALTH360_PROJECT.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_STAGING"} */;
+[0m23:10:07.639512 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.782 seconds
+[0m23:10:07.653998 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_HEALTH360_PROJECT_MARTS, now list_HEALTH360_PROJECT_SNAPSHOTS)
+[0m23:10:07.668720 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_SNAPSHOTS"
+[0m23:10:07.672505 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_SNAPSHOTS: show objects in HEALTH360_PROJECT.SNAPSHOTS
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_SNAPSHOTS"} */;
+[0m23:10:07.742588 [debug] [ThreadPool]: SQL status: SUCCESS 10 in 0.513 seconds
+[0m23:10:07.755451 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_STAGING"
+[0m23:10:07.755451 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_STAGING: show user functions in HEALTH360_PROJECT.STAGING
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_STAGING"} */
+[0m23:10:08.392186 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.635 seconds
+[0m23:10:08.641676 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.968 seconds
+[0m23:10:08.647750 [debug] [ThreadPool]: Using snowflake connection "list_HEALTH360_PROJECT_SNAPSHOTS"
+[0m23:10:08.654218 [debug] [ThreadPool]: On list_HEALTH360_PROJECT_SNAPSHOTS: show user functions in HEALTH360_PROJECT.SNAPSHOTS
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "connection_name": "list_HEALTH360_PROJECT_SNAPSHOTS"} */
+[0m23:10:09.116066 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.461 seconds
+[0m23:10:09.123123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23f3c61b-9c01-4d98-ab68-8333372bca7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D056C97A10>]}
+[0m23:10:09.135374 [debug] [Thread-2 (]: Began running node snapshot.Healthcare_360.patient_snapshot
+[0m23:10:09.135374 [info ] [Thread-2 (]: 1 of 1 START snapshot SNAPSHOTS.patient_snapshot ............................... [RUN]
+[0m23:10:09.137384 [debug] [Thread-2 (]: Acquiring new snowflake connection 'snapshot.Healthcare_360.patient_snapshot'
+[0m23:10:09.137384 [debug] [Thread-2 (]: Began compiling node snapshot.Healthcare_360.patient_snapshot
+[0m23:10:09.149435 [debug] [Thread-2 (]: Writing injected SQL for node "snapshot.Healthcare_360.patient_snapshot"
+[0m23:10:09.150944 [debug] [Thread-2 (]: Began executing node snapshot.Healthcare_360.patient_snapshot
+[0m23:10:09.265139 [debug] [Thread-2 (]: Using snowflake connection "snapshot.Healthcare_360.patient_snapshot"
+[0m23:10:09.265139 [debug] [Thread-2 (]: On snapshot.Healthcare_360.patient_snapshot: select * from (
+        select first_name, last_name, address, city, state, zip from (
+                
+
+
+
+select
+    patient_id,
+    first_name,
+    last_name,
+    full_name,
+    dob,
+    gender,
+    race,
+    address,
+    city,
+    state,
+    zip,
+    created_at
+from HEALTH360_PROJECT.STAGING.stg_patients
+
+            ) subq
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "health360_dbt", "target_name": "dev", "node_id": "snapshot.Healthcare_360.patient_snapshot"} */
+[0m23:10:09.265139 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m23:10:11.902093 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c73ee4-030b-9df4-0032-36730034303a
+[0m23:10:11.902093 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 11 at position 4
+invalid identifier 'FULL_NAME'
+[0m23:10:11.967810 [debug] [Thread-2 (]: Database Error in snapshot patient_snapshot (snapshots\patient_snapshot.sql)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'FULL_NAME'
+[0m23:10:11.967810 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23f3c61b-9c01-4d98-ab68-8333372bca7e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D056D6FA10>]}
+[0m23:10:11.981145 [error] [Thread-2 (]: 1 of 1 ERROR snapshotting SNAPSHOTS.patient_snapshot ........................... [[31mERROR[0m in 2.83s]
+[0m23:10:11.981145 [debug] [Thread-2 (]: Finished running node snapshot.Healthcare_360.patient_snapshot
+[0m23:10:11.981145 [debug] [Thread-6 (]: Marking all children of 'snapshot.Healthcare_360.patient_snapshot' to be skipped because of status 'error'.  Reason: Database Error in snapshot patient_snapshot (snapshots\patient_snapshot.sql)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'FULL_NAME'.
+[0m23:10:11.981145 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:10:11.981145 [debug] [MainThread]: Connection 'list_HEALTH360_PROJECT' was left open.
+[0m23:10:11.981145 [debug] [MainThread]: On list_HEALTH360_PROJECT: Close
+[0m23:10:12.643684 [debug] [MainThread]: Connection 'list_HEALTH360_PROJECT_STAGING' was left open.
+[0m23:10:12.654136 [debug] [MainThread]: On list_HEALTH360_PROJECT_STAGING: Close
+[0m23:10:13.247560 [debug] [MainThread]: Connection 'list_HEALTH360_PROJECT_SNAPSHOTS' was left open.
+[0m23:10:13.249583 [debug] [MainThread]: On list_HEALTH360_PROJECT_SNAPSHOTS: Close
+[0m23:10:14.003549 [debug] [MainThread]: Connection 'snapshot.Healthcare_360.patient_snapshot' was left open.
+[0m23:10:14.003549 [debug] [MainThread]: On snapshot.Healthcare_360.patient_snapshot: Close
+[0m23:10:14.605802 [info ] [MainThread]: 
+[0m23:10:14.607855 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 13.87 seconds (13.87s).
+[0m23:10:14.614018 [debug] [MainThread]: Command end result
+[0m23:10:14.736877 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Learning\DBT\Healthcare_360\target\manifest.json
+[0m23:10:14.750507 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Learning\DBT\Healthcare_360\target\semantic_manifest.json
+[0m23:10:14.765208 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Learning\DBT\Healthcare_360\target\osi_document.json
+[0m23:10:14.780482 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Learning\DBT\Healthcare_360\target\run_results.json
+[0m23:10:14.780482 [info ] [MainThread]: 
+[0m23:10:14.782244 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m23:10:14.782244 [info ] [MainThread]: 
+[0m23:10:14.782244 [error] [MainThread]: [[31mERROR[0m]: in snapshot patient_snapshot (snapshots\patient_snapshot.sql)
+[0m23:10:14.782244 [error] [MainThread]:   Database Error in snapshot patient_snapshot (snapshots\patient_snapshot.sql)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'FULL_NAME'
+[0m23:10:14.782244 [info ] [MainThread]: 
+[0m23:10:14.782244 [info ] [MainThread]:   compiled code at target\compiled\Healthcare_360\snapshots\patient_snapshot.sql\patient_snapshot.sql
+[0m23:10:14.782244 [info ] [MainThread]: 
+[0m23:10:14.782244 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m23:10:14.792981 [debug] [MainThread]: Command `dbt snapshot` failed at 23:10:14.792981 after 16.61 seconds
+[0m23:10:14.792981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D04F902300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D04F6CDC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D0557A0F50>]}
+[0m23:10:14.792981 [debug] [MainThread]: Flushing usage events
+[0m23:10:15.918922 [debug] [MainThread]: An error was encountered while trying to flush usage events
